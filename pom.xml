@@ -18,7 +18,6 @@
 
     <modules>
         <module>Eureka</module>
-        <module>Eureka2</module>
     </modules>
 
     <properties>

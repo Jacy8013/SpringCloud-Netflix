@@ -1,0 +1,10 @@
+eureka:
+  instance:
+    hostname: eureka1.jacy.io
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka2.jacy.io:7102/eureka/
+server:
+  port: 7101
