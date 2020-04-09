@@ -1,10 +1,10 @@
 eureka:
   instance:
-    hostname: eureka2.jacy.io
+    hostname: svr2.eureka.jacy.io
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka1.jacy.io:7101/eureka/
+      defaultZone: http://svr1.eureka.jacy.io:7101/eureka/
 server:
   port: 7102

@@ -1,0 +1,8 @@
+server:
+  port: 7202
+eureka:
+  client:
+    service-url:
+      defaultZone: http://svr1.eureka.jacy.io:7101/eureka/,http://svr2.eureka.jacy.io:7102/eureka/
+  instance:
+    hostname: prv2.eureka.jacy.io

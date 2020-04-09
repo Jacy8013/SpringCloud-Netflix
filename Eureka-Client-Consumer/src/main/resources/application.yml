@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-client-consumer
+server:
+  port: 7301
+eureka:
+  client:
+    service-url:
+      defaultZone: http://svr2.eureka.jacy.io:7102/eureka/
+  instance:
+    metadata-map:
+      role: consumer

@@ -9,10 +9,9 @@
         <version>0.0.1</version>
     </parent>
 
-    <artifactId>${parent.artifactId}-eureka</artifactId>
-    <name>${parent.artifactId}-eureka-server</name>
-    <packaging>jar</packaging>
-    <description>Hello Eureka</description>
+    <artifactId>eureka-client-consumer</artifactId>
+    <name>eureka-client-consumer</name>
+    <description>Hello Eureka Client Consumer</description>
 
     <dependencies>
         <dependency>
