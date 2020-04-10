@@ -10,3 +10,11 @@ eureka:
   instance:
     metadata-map:
       role: consumer
+
+eureka-client-provider:
+  ribbon:
+    MaxAutoRetries: 1
+    MaxAutoRetriesNextServer: 1
+    ServerListRefreshInterval: 3000
+    OkToRetryOnAllOperations: true
+

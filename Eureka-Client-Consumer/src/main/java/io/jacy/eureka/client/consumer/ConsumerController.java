@@ -22,13 +22,14 @@ public class ConsumerController {
 
     private final LoadBalancerClient lb;
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
 
     public ConsumerController(DiscoveryClient client, EurekaClient eurekaClient,
-                              LoadBalancerClient lb) {
+                              LoadBalancerClient lb, RestTemplate restTemplate) {
         this.client = client;
         this.eurekaClient = eurekaClient;
         this.lb = lb;
+        this.restTemplate = restTemplate;
     }
 
     @GetMapping("/euk/c1")
@@ -56,8 +57,8 @@ public class ConsumerController {
 
     @GetMapping("/euk/c4")
     public Object consumer4() {
-        String url = lb.choose("eureka-client-provider").getUri() + "/euk/provider";
-        System.out.println(url);
-        return restTemplate.getForEntity(url, String.class);
+//        String url = lb.choose("eureka-client-provider").getUri() + "/euk/provider";
+//        System.out.println(url);
+        return restTemplate.getForEntity("http://EUREKA-CLIENT-PROVIDER/euk/provider", String.class);
     }
 }
